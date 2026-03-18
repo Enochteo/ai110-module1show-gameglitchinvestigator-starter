@@ -22,17 +22,25 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  I used Copilot in VS Code
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  The AI was able to correctly fix the current score updates as some cases when attempts were even the score was still increased even when the guess was incorrect and I was able to verify that the score increases when the guess was correct and is not when the guess was incorrect
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+  The first refactor for the `check_guess()` function worked for most test cases but did not work when the guess is an integer and the secreet a string as it returned an inappropraite response as per the logic, I verified this using a roboust test suite covering a lot of test cases.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+  I decided a bug was fixed after reviewing and testing myself and then asking the agent to provide a roboust test suite that covers as many test cases and made sure all the test cases are passed.
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  An example is `test_bug_fix_too_low_shows_higher_hint()` it tests the `chech_guess()` function in <a>ai110-module1show-gameglitchinvestigator-starter/logic_utils.py</a> to make sure that when an integer guess is made and is lower than the secret number the code returns an appropraite result/hint that tells the player the guess is 'Too Low' and should 'Go Higher'.
 - Did AI help you design or understand any tests? How?
+  I promted the Agent to provide multiple test cases testing various normal as well as edge cases to be ran with pytest.
 
 ---
 
