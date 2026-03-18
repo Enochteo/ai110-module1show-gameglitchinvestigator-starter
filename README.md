@@ -42,9 +42,5 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo
 
-- [ ] [![Passed test cases](image.png)]
-- [![Working App](image-1.png)]
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- **Passed test cases** ![Passed test cases](image.png)
+- **Working App** ![Working App](image-1.png)
