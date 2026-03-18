@@ -1,6 +1,7 @@
 import random
 import streamlit as st
 
+# FIXME: range for difficulties not set approprately
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
@@ -28,7 +29,8 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+# FIXME: Hint not appropraite for scenarios when guess != secret
+# Error not handled properly
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
@@ -46,7 +48,7 @@ def check_guess(guess, secret):
             return "Too High", "📈 Go HIGHER!"
         return "Too Low", "📉 Go LOWER!"
 
-
+# FIXME: score increases for higher guesses on even number of attempts
 def update_score(current_score: int, outcome: str, attempt_number: int):
     if outcome == "Win":
         points = 100 - 10 * (attempt_number + 1)
@@ -131,6 +133,7 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+# FIXME: New game does not reset properly
 if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(1, 100)
