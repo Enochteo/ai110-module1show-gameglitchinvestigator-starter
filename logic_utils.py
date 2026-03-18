@@ -59,7 +59,7 @@ def check_guess(guess, secret):
             if g > secret:
                 return "Too High", "📉 Go LOWER!"
             return "Too Low", "📈 Go HIGHER!"
-
+    # FIX: Returned appropraiate hint for each case of the guess being greter or lesser than the secret number, also properly checked and covered for different input value data types
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
